@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main() {
+    const int n = 20; 
+    double arr[n];
+    for (int i = 0; i < n; i++)  {
+        arr[i] = rand() % 100 + 1;
+    }
+        cout << "Начальный массив: ";
+        for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    int minIndex = 0, maxIndex = 0;
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < arr[minIndex]) {
+            minIndex = i;
+        }
+        if (arr[i] > arr[maxIndex]) {
+            maxIndex = i;
+        }
+    }
+    swap(arr[minIndex], arr[maxIndex]);
+    
+    
+    cout << "Измененный массив: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
+// задача с заменой
+
+
+
+
+
+
